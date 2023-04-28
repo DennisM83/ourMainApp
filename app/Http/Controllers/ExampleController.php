@@ -8,7 +8,7 @@ class ExampleController extends Controller
 {
     public function homePage()
     {
-        return '<h1>Homepage</h1><a href="/about">Vist about page</a>';
+        return view('homepage');
     }
 
     public function aboutPage()
