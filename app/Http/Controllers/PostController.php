@@ -13,6 +13,9 @@ class PostController extends Controller
         ]);
 
         $incomingFields['title'] = strip_tags($incomingFields['title']);
+        $incomingFields['body'] = strip_tags($incomingFields['body']);
+        $incomingFields['user_id'] = auth()->id();
+
         return 'Hey!';
     }
 
