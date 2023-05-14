@@ -24,6 +24,6 @@ Route::post('/logout', [UserController::class, "logout"])->middleware('auth');
 
 
 //Post related routes
-Route::get('/create-post', [PostController::class, 'showCreateForm'])->middleware('auth');
-Route::post('/create-post', [PostController::class, 'storeNewPost'])->middleware('auth');
+Route::get('/create-post', [PostController::class, 'showCreateForm'])->middleware('mustBeLoggedIn');
+Route::post('/create-post', [PostController::class, 'storeNewPost'])->middleware('mustBeLoggedIn');
 Route::get('/post/{post}', [PostController::class, 'viewSinglePost']);
