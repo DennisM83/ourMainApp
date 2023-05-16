@@ -9,6 +9,9 @@ use Illuminate\Validation\Rule;
 class UserController extends Controller
 {
 
+    public function profile() {
+        return view('profile-post');
+    }
 
     public function register(Request $request){
         $incomingFields = $request->validate([
